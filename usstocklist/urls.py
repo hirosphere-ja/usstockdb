@@ -8,4 +8,5 @@ urlpatterns = [
   path('', views.IndexView.as_view(), name='index'),
   path('usstocklist/add/', views.AddView.as_view(), name='add'),
   path('usstocklist/edit/<slug:pk>', views.EditView.as_view(), name='edit'),
+  path('usstocklist/delete/<slug:pk>', views.DeleteView.as_view(), name='delete'),
 ]

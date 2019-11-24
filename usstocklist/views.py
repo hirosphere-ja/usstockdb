@@ -30,3 +30,9 @@ class EditView(generic.UpdateView):
   fields = '__all__'
   success_url = reverse_lazy('index')
   template_name = 'usstocklist/usstock_edit.html'
+
+
+class DeleteView(generic.DeleteView):
+  model = Usstock
+  success_url = reverse_lazy('index')
+  # template_name = "TEMPLATE_NAME"

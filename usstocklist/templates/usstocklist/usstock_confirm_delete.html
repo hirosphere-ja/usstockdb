@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+米国銘柄削除
+{% endblock %}
+
+{% block content %}
+  <h1>米国銘柄削除</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    <table class="table">
+      <tr><td>ティッカー</td><td>{{ object.ticker }}</td></tr>
+      <tr><td>銘柄名    </td><td>{{ object.stockname }}</td></tr>
+      <tr><td>市場      </td><td>{{ object.market }}</td></tr>
+    </table>
+    <button type="submit" class="submit btn btn-info">削除</button>
+    <a href="{% url 'index' %}" class="btn btn-primary">TOPに戻る</a>
+  </form>
+{% endblock %}
