@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  米国市場一覧
+{% endblock %}
+
+{% block content %}
+  <h1>米国市場一覧</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>市場</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for market in market_list %}
+        <td>{{ market.id }}</td>
+        <td>{{ market.market }}</td>
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+{% endblock %}
