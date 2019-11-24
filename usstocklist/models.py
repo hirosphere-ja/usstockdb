@@ -8,7 +8,7 @@ class Market(models.Model):
     return self.market
 
 class Usstock(models.Model):
-  ticker = models.CharField('ティッカー', max_length=5)
+  ticker = models.CharField('ティッカー', max_length=5, primary_key=True)
   stockname = models.CharField('銘柄名', max_length=255)
   market = models.ForeignKey(
     Market, verbose_name='市場', on_delete=models.PROTECT,
