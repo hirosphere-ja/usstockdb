@@ -13,6 +13,7 @@
         <td>ティッカー</td>
         <td>銘柄名</td>
         <td>市場</td>
+        <td>変更<!-- ・登録 --></td>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,8 @@
         <td>{{ usstock.ticker }}</td>
         <td>{{ usstock.stockname }}</td>
         <td>{{ usstock.market }}</td>
+        <td><a href="{% url 'edit' usstock.ticker %}" class="btn btn-primary">変更</a>
+        </td>
       </tr>
       {% endfor%}
     </tbody>
