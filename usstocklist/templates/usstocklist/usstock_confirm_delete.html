@@ -13,7 +13,7 @@
       <tr><td>銘柄名    </td><td>{{ object.stockname }}</td></tr>
       <tr><td>市場      </td><td>{{ object.market }}</td></tr>
     </table>
-    <button type="submit" class="submit btn btn-info">削除</button>
+    <button type="submit" class="submit btn btn-danger">削除</button>
     <a href="{% url 'index' %}" class="btn btn-primary">TOPに戻る</a>
   </form>
 {% endblock %}
